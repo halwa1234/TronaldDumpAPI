@@ -12,7 +12,7 @@ def Rand():
 
     r=requests.get(url)
 
-    print(r.status_code)
+    #print(r.status_code)
     message=r.json()['message']
     return(message)
 
@@ -27,12 +27,12 @@ def Personal(name):
     r=requests.get(url,params=parameters)
 
     info=json.loads(r.content)
-    print(r.status_code)
+    #print(r.status_code)
     message=r.json()['message']
     nickname=r.json()['nickname']
 
     #print(message,nickname)
-    print(json.dumps(info,indent=2))
+    #print(json.dumps(info,indent=2))
     return(message)
 
 #............GUI...............
@@ -58,7 +58,7 @@ root=Tk()
 root.geometry("750x450")
 root.title('Trump says...')
 
-root.iconbitmap('@tronaldDump.xbm')
+#root.iconbitmap('@tronaldDump.xbm')
 mainFrame=LabelFrame(root, text="Trump says...", width=600, height=350)
 mainFrame.grid(row=0,column=0,padx=(50,50), pady=(50,50))
 
